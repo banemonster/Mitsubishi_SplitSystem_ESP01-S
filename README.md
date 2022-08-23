@@ -12,6 +12,9 @@ This module is expensive at approx $150 AUD and requires cloud (internet) connec
 I was also unsure how this would integrate into Home Assistant.
 
 An alternative way to control this split system with an ESP32/ESP8266 was sought
+This solution has been made possible following 
+
+[github://geoffdavis/esphome-mitsubishiheatpump](https://github.com/geoffdavis/esphome-mitsubishiheatpump)
 
 *****CN105 Port*****
 
@@ -84,12 +87,136 @@ available on ebay/aliexpress for under a dollar.
 
  
 **Prototype working**
+
  ![image](https://user-images.githubusercontent.com/90736990/186046143-faeb23c3-6c2f-44f7-b272-0d68b74b6b31.png)
 
  **Prototype config**
  
+ The following config has been deployed via ESPHOME
+```
+ esphome:
+  name: esp-01s-1
+
+esp8266:
+  board: esp01_1m
+
+# Enable logging
+logger:
+  # ESP8266 only - disable serial port logging, as the HeatPump component
+  # needs the sole hardware UART on the ESP8266
+  baud_rate: 0
   
-      2x8 PIN header LCSC part# C2897405
-      1x4 PIN header LCSC part# C2897367
-      1x3 PIN header LCSC part# C718242
-  2x  1x6 PIN header LCSC part# C40877
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "91edd67242043c502dba027797f4f21a"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp-01S-1 Fallback Hotspot"
+    password: "4gRboFYbND9N"
+
+captive_portal:
+
+
+
+
+#code below
+substitutions:
+  name: esp-01s-1
+  friendly_name: Master Mitsubishi AC
+
+
+
+# Note: if upgrading from 1.x releases of esphome-mitsubishiheatpump, be sure
+# to remove any old entries from the `libraries` and `includes` section.
+#libraries:
+  # Remove reference to SwiCago/HeatPump
+
+#includes:
+  # Remove reference to src/esphome-mitsubishiheatpump
+
+
+
+
+
+# Enable Web server.
+web_server:
+  port: 80
+
+  # Sync time with Home Assistant.
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+# Text sensors with general information.
+text_sensor:
+  # Expose ESPHome version as sensor.
+  - platform: version
+    name: ${name} ESPHome Version
+  # Expose WiFi information as sensors.
+  - platform: wifi_info
+    ip_address:
+      name: ${name} IP
+    ssid:
+      name: ${name} SSID
+    bssid:
+      name: ${name} BSSID
+
+# Sensors with general information.
+sensor:
+  # Uptime sensor.
+  - platform: uptime
+    name: ${name} Uptime
+
+  # WiFi Signal sensor.
+  - platform: wifi_signal
+    name: ${name} WiFi Signal
+    update_interval: 60s
+
+external_components:
+  - source: github://geoffdavis/esphome-mitsubishiheatpump
+
+
+climate:
+  - platform: mitsubishi_heatpump
+    name: "${friendly_name}"
+
+    # ESP32 only - change UART0 to UART1 or UART2 and remove the
+    # logging:baud_rate above to allow the built-in UART0 to function for
+    # logging.
+    hardware_uart: UART0
+    #baud_rate: 9600
+    supports:
+      mode: [HEAT_COOL, COOL, HEAT, FAN_ONLY]
+      fan_mode: [AUTO, LOW, MEDIUM, HIGH]
+      swing_mode: ["OFF", "VERTICAL"]
+    visual:
+      min_temperature: 16
+      max_temperature: 31
+      temperature_step: 0.5
+```
+  
+  
+Update version
+------------
+
+Now that the prototype has been proven, the next step is to refine the solution.
+This was done by creating a PCB to accomodate the discrete components used in the prototype.
+
+The PCB was created using Easy EDA.
+
+https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/mitsubishi-ac-with-ESP-01s.pdf
+
+![image](https://user-images.githubusercontent.com/90736990/186047070-388a2cfe-2dbe-4e86-89c5-8effc9133bb1.png)
+
+**BOM**
+
+![image](https://user-images.githubusercontent.com/90736990/186047468-c2abb91b-aa26-4b1e-a27d-fbaef604920b.png)
+
+
