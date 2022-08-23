@@ -11,7 +11,7 @@ This port can also likely be used with a wired wall controller.
 This module is expensive at approx $150 AUD and requires cloud (internet) connectivity to function, if this Mitsibishi cloud servers are offline then it will not function.
 I was also unsure how this would integrate into Home Assistant.
 
-An alternative way to control this split system with an ESP32/ESP8266 was sought.
+An alternative way to control this split system with an ESP32/ESP8266 was sought
 
 *****CN105 Port*****
 
@@ -28,6 +28,7 @@ The ESP8266 runs on 3.3v so we need to do two things
   2. Use a 3.3v to 5v bi-direction logic converter
      This will allow the ESP8266 to communicate with the split-system by boosting/dropping the Rx/TX during communications.
 
+The ESP8266 is adopted into ESPHOME --> Home Assistant.
 
 PROTOTYPING
 ----------------------------
@@ -77,8 +78,15 @@ available on ebay/aliexpress for under a dollar.
 
  
  
+**Prototype assembly**
  
+ ![image](https://user-images.githubusercontent.com/90736990/186046008-7ee608f8-2d50-43dd-92d6-24fb9485d198.png)
+
  
+**Prototype working**
+ ![image](https://user-images.githubusercontent.com/90736990/186046143-faeb23c3-6c2f-44f7-b272-0d68b74b6b31.png)
+
+ **Prototype config**
  
   
       2x8 PIN header LCSC part# C2897405
