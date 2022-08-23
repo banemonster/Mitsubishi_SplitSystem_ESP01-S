@@ -219,4 +219,5 @@ https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/mitsubis
 
 ![image](https://user-images.githubusercontent.com/90736990/186047468-c2abb91b-aa26-4b1e-a27d-fbaef604920b.png)
 
+![image](https://user-images.githubusercontent.com/90736990/186047845-78a2f905-c9c5-44ad-bd4e-6e2520daefea.png)
 
