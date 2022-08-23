@@ -39,7 +39,7 @@ Hardware used
   --------------------------------------------
   3.3v to 5v Logic Level Converter Bi-Directional
   (2.54mm PIN headers also required)
-  https://core-electronics.com.au/logic-level-converter-bi-directional.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMuJvLYmw5sYBc2f_s8YdNlOhzxnMnitoNQM5rWQFOs-F3umBzUcxvgaArQAEALw_wcB
+  <sub>https://core-electronics.com.au/logic-level-converter-bi-directional.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMuJvLYmw5sYBc2f_s8YdNlOhzxnMnitoNQM5rWQFOs-F3umBzUcxvgaArQAEALw_wcB</sub>
   
   Schematic here
   https://dlnmh9ip6v2uc.cloudfront.net/datasheets/BreakoutBoards/Logic_Level_Bidirectional.pdf
