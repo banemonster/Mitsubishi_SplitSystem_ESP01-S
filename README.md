@@ -29,32 +29,40 @@ The ESP8266 runs on 3.3v so we need to do two things
      This will allow the ESP8266 to communicate with the split-system by boosting/dropping the Rx/TX during communications.
 
 
-*****PROTOTYPING*****
+PROTOTYPING
+----------------------------
 
-Hardware used
+**Hardware used**
 
-  --------------------------------------------
-  ESP8266 with Wifi module
-  (https://core-electronics.com.au/wifi-module-esp8266-4mb.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMsqEynneGsqAUEmhW5dBhQp8BbSO-jsiZAU37wLrKRTZumEK9Bxl3oaAjbLEALw_wcB)
-  --------------------------------------------
-  3.3v to 5v Logic Level Converter Bi-Directional
-  (2.54mm PIN headers also required)
-  <sub>https://core-electronics.com.au/logic-level-converter-bi-directional.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMuJvLYmw5sYBc2f_s8YdNlOhzxnMnitoNQM5rWQFOs-F3umBzUcxvgaArQAEALw_wcB</sub>
-  
-  Schematic here
-  https://dlnmh9ip6v2uc.cloudfront.net/datasheets/BreakoutBoards/Logic_Level_Bidirectional.pdf
-  --------------------------------------------
-  5v to 3.v step down DV-DC converrter
-  Based on AMS1117 
-  available on ebay/aliexpress for under a dollar.
-  https://lonelybinary.com/products/ams1117-3-3-5v-to-3-3v-step-down-regulator-module-pack-of-20
-  --------------------------------------------
-  JST, PA Female Connector Housing, 2mm Pitch, 5 Way, 1 Row
-  https://au.rs-online.com/web/p/wire-housings-plugs/4766798
-  --------------------------------------------
-  JST SPHD Crimp Terminal to Unterminated Crimped Wire, 300mm, 0.25mm²
-  https://au.rs-online.com/web/p/crimped-wire/5128737
-  --------------------------------------------
+
+**ESP8266 with Wifi module**
+
+<sub>https://core-electronics.com.au/wifi-module-esp8266-4mb.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMsqEynneGsqAUEmhW5dBhQp8BbSO-jsiZAU37wLrKRTZumEK9Bxl3oaAjbLEALw_wcB</sub>
+
+**3.3v to 5v Logic Level Converter Bi-Directional**
+
+<sub>https://core-electronics.com.au/logic-level-converter-bi-directional.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMuJvLYmw5sYBc2f_s8YdNlOhzxnMnitoNQM5rWQFOs-F3umBzUcxvgaArQAEALw_wcB</sub>
+
+Schematic here
+
+<sub>https://dlnmh9ip6v2uc.cloudfront.net/datasheets/BreakoutBoards/Logic_Level_Bidirectional.pdf</sub>
+
+**5v to 3.v step down DV-DC converter**
+
+Based on AMS1117 
+
+available on ebay/aliexpress for under a dollar.
+
+<sub>https://lonelybinary.com/products/ams1117-3-3-5v-to-3-3v-step-down-regulator-module-pack-of-20</sub>
+
+**JST, PA Female Connector Housing, 2mm Pitch, 5 Way, 1 Row**
+
+<sub>https://au.rs-online.com/web/p/wire-housings-plugs/4766798</sub>
+
+**JST SPHD Crimp Terminal to Unterminated Crimped Wire, 300mm, 0.25mm²**
+
+<sub>https://au.rs-online.com/web/p/crimped-wire/5128737</sub>
+
  
  
  
