@@ -203,7 +203,7 @@ climate:
 ```
   
   
-Update version
+Updated version
 ------------
 
 Now that the prototype has been proven, the next step is to refine the solution.
@@ -221,3 +221,11 @@ https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/mitsubis
 
 ![image](https://user-images.githubusercontent.com/90736990/186047845-78a2f905-c9c5-44ad-bd4e-6e2520daefea.png)
 
+
+
+Further revision
+-------------
+A new version was designed with an embedded ESP-12S however this failed to go into programming mode.
+There appears to be an error in the PCB design.
+
+![image](https://user-images.githubusercontent.com/90736990/186048632-fd1ddc54-288e-42f6-86ad-d28587d7cfc2.png)
