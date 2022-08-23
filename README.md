@@ -37,9 +37,15 @@ PROTOTYPING
 
 **ESP8266 with Wifi module**
 
+
+<img src="https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/images/ESP8266.jpg" width="200" height="200">
+
+
 <sub>https://core-electronics.com.au/wifi-module-esp8266-4mb.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMsqEynneGsqAUEmhW5dBhQp8BbSO-jsiZAU37wLrKRTZumEK9Bxl3oaAjbLEALw_wcB</sub>
 
 **3.3v to 5v Logic Level Converter Bi-Directional**
+
+<img src="https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/images/logic_level.jpg" width="200" height="200">
 
 <sub>https://core-electronics.com.au/logic-level-converter-bi-directional.html?gclid=Cj0KCQjw0oyYBhDGARIsAMZEuMuJvLYmw5sYBc2f_s8YdNlOhzxnMnitoNQM5rWQFOs-F3umBzUcxvgaArQAEALw_wcB</sub>
 
@@ -47,7 +53,9 @@ Schematic here
 
 <sub>https://dlnmh9ip6v2uc.cloudfront.net/datasheets/BreakoutBoards/Logic_Level_Bidirectional.pdf</sub>
 
-**5v to 3.v step down DV-DC converter**
+**5v to 3.v step down DC-DC converter**
+
+<img src="https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/images/5v_3.3.JPG" width="200" height="200">
 
 Based on AMS1117 
 
@@ -57,9 +65,13 @@ available on ebay/aliexpress for under a dollar.
 
 **JST, PA Female Connector Housing, 2mm Pitch, 5 Way, 1 Row**
 
+<img src="https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/images/PAP05.JPG" width="200" height="200">
+
 <sub>https://au.rs-online.com/web/p/wire-housings-plugs/4766798</sub>
 
 **JST SPHD Crimp Terminal to Unterminated Crimped Wire, 300mm, 0.25mm²**
+
+<img src="https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/images/JST%20SPHD.JPG" width="200" height="200">
 
 <sub>https://au.rs-online.com/web/p/crimped-wire/5128737</sub>
 
