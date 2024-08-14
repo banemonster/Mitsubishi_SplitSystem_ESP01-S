@@ -110,7 +110,8 @@ logger:
 api:
 
 ota:
-  password: "91edd67242043c502dba027797f4f21a"
+  - platform: esphome
+    password: "91edd67242043c502dba027797f4f21a"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -173,11 +174,12 @@ sensor:
   # Uptime sensor.
   - platform: uptime
     name: ${name} Uptime
+    update_interval: 3600s
 
   # WiFi Signal sensor.
   - platform: wifi_signal
     name: ${name} WiFi Signal
-    update_interval: 60s
+    update_interval: 3600s
 
 external_components:
   - source: github://geoffdavis/esphome-mitsubishiheatpump
@@ -194,7 +196,7 @@ climate:
     #baud_rate: 9600
     supports:
       mode: [HEAT_COOL, COOL, HEAT, FAN_ONLY]
-      fan_mode: [AUTO, LOW, MEDIUM, HIGH]
+      fan_mode: [AUTO, LOW, MEDIUM, MIDDLE, HIGH]
       swing_mode: ["OFF", "VERTICAL"]
     visual:
       min_temperature: 16
