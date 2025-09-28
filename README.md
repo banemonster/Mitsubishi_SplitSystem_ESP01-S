@@ -238,4 +238,4 @@ There appears to be an error in the PCB design.
 Example of dashboard layout
 -------------
 
-![image](https://user-images.githubusercontent.com/90736990/186048632-fd1ddc54-288e-42f6-86ad-d28587d7cfc2.png)
+![image](https://raw.githubusercontent.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/refs/heads/main/images/dashboard_example_1.png)
