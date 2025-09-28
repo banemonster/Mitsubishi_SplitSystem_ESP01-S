@@ -244,7 +244,7 @@ Example of dashboard layout
 Example of home zone automation in Home Assistant that ensures scheduled climate control routines only operate when people are at within 5km of home
 It simply toggles a boolean on or off, this check is then included in the climate control schedule to decide whether to run or skip the scheduled action.
 -------------
-
+```
 alias: Home Zone Automation
 description: >-
   Switches on the Someone is home input boolean if Al or Kat are in the home
@@ -294,3 +294,4 @@ actions:
         target:
           entity_id: input_boolean.someone_is_home
 mode: single
+```
