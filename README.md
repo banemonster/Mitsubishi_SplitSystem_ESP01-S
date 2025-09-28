@@ -240,6 +240,10 @@ Example of dashboard layout
 
 ![image](https://raw.githubusercontent.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/refs/heads/main/images/dashboard_example_1.png)
 
+Example of one adjustable schedule. Multiple units can be controlled with a single schedule if required.
+-------------
+![image](https://github.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/blob/main/images/schedule_example.png)
+
 
 Example of home zone automation in Home Assistant that ensures scheduled climate control routines only operate when people are at within 5km of home
 It simply toggles a boolean on or off, this check is then included in the climate control schedule to decide whether to run or skip the scheduled action.
