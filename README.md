@@ -231,3 +231,11 @@ A new version was designed with an embedded ESP-12S however this failed to go in
 There appears to be an error in the PCB design.
 
 ![image](https://user-images.githubusercontent.com/90736990/186048632-fd1ddc54-288e-42f6-86ad-d28587d7cfc2.png)
+
+
+
+
+Example of dashboard layout
+-------------
+
+![image](https://user-images.githubusercontent.com/90736990/186048632-fd1ddc54-288e-42f6-86ad-d28587d7cfc2.png)
