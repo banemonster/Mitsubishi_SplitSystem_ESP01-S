@@ -239,3 +239,58 @@ Example of dashboard layout
 -------------
 
 ![image](https://raw.githubusercontent.com/banemonster/Mitsubishi_SplitSystem_ESP01-S/refs/heads/main/images/dashboard_example_1.png)
+
+
+Example of home zone automation in Home Assistant that ensures scheduled climate control routines only operate when people are at within 5km of home
+It simply toggles a boolean on or off, this check is then included in the climate control schedule to decide whether to run or skip the scheduled action.
+-------------
+
+alias: Home Zone Automation
+description: >-
+  Switches on the Someone is home input boolean if Al or Kat are in the home
+  zone. Triggered /30 minutes or if Person 1 or Person 2 enter/leave the home zone.
+triggers:
+  - trigger: zone
+    entity_id: person.person2
+    zone: zone.home
+    event: enter
+  - trigger: zone
+    entity_id: person.person1
+    zone: zone.home
+    event: enter
+  - trigger: zone
+    entity_id: person.person2
+    zone: zone.home
+    event: leave
+  - trigger: zone
+    entity_id: person.person1
+    zone: zone.home
+    event: leave
+  - trigger: time_pattern
+    enabled: true
+    hours: "1"
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: or
+            conditions:
+              - condition: zone
+                entity_id: person.person2
+                zone: zone.home
+              - condition: zone
+                entity_id: person.person1
+                zone: zone.home
+        sequence:
+          - action: input_boolean.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: input_boolean.someone_is_home
+    default:
+      - action: input_boolean.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: input_boolean.someone_is_home
+mode: single
