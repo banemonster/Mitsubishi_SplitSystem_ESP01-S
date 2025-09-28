@@ -247,7 +247,7 @@ It simply toggles a boolean on or off, this check is then included in the climat
 ```
 alias: Home Zone Automation
 description: >-
-  Switches on the Someone is home input boolean if Al or Kat are in the home
+  Switches on the Someone is home input boolean if Person 1 or Person 2 are in the home
   zone. Triggered /30 minutes or if Person 1 or Person 2 enter/leave the home zone.
 triggers:
   - trigger: zone
